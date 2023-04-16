@@ -2,3 +2,5 @@ __pycache__/
 dist/
 *.egg-info/
 
+# App-specific
+harmonic_mean.c
