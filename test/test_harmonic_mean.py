@@ -1,4 +1,4 @@
-from imppkg.harmonic_mean import harmonic_mean
+from imppkg import harmonic_mean
 from imppkg.harmony import main
 
 
