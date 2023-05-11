@@ -1,11 +1,21 @@
 import sys
 
-import termcolor
+from termcolor import cprint
 
 from imppkg.harmonic_mean import harmonic_mean
 
 
 def main():
-    # TODO: Some input validation (maybe?)
-    nums = [float(arg) for arg in sys.argv[1:]]
-    termcolor.cprint(harmonic_mean(nums), "red", "on_yellow", attrs=["bold"])
+    result = 0.0
+
+    try:
+        nums = [float(arg) for arg in sys.argv[1:]]
+    except ValueError:
+        nums = []
+
+    try:
+        harmonic_mean(nums)
+    except ZeroDivisionError:
+        pass
+
+    cprint(result, "red", "on_yellow", attrs=["bold"])
