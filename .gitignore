@@ -4,6 +4,7 @@ build/
 dist/
 *.egg-info/
 .coverage
+.vscode
 
 # App-specific
 harmonic_mean.c

@@ -14,7 +14,7 @@ def main():
         nums = []
 
     try:
-        harmonic_mean(nums)
+        result = harmonic_mean(nums)
     except ZeroDivisionError:
         pass
 
