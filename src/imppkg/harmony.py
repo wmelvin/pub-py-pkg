@@ -5,7 +5,7 @@ from termcolor import colored
 from imppkg.harmonic_mean import harmonic_mean
 
 
-def _parse_nums(input: str) -> list[float]:
+def _parse_nums(input: list[str]) -> list[float]:
     try:
         return [float(arg) for arg in input]
     except ValueError:
