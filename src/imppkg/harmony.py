@@ -1,21 +1,29 @@
 import sys
 
-from termcolor import cprint
+from termcolor import colored
 
 from imppkg.harmonic_mean import harmonic_mean
 
 
-def main():
-    result = 0.0
-
+def _parse_nums(input: str) -> list[float]:
     try:
-        nums = [float(arg) for arg in sys.argv[1:]]
+        return [float(arg) for arg in input]
     except ValueError:
-        nums = []
+        return []
 
+
+def _calculate_result(nums: list[float]) -> float:
+    result = 0.0
     try:
         result = harmonic_mean(nums)
     except ZeroDivisionError:
         pass
+    return result
 
-    cprint(result, "red", "on_yellow", attrs=["bold"])
+
+def _format_output(result: float) -> str:
+    return colored(str(result), "red", "on_yellow", attrs=["bold"])
+
+
+def main():
+    print(_format_output(_calculate_result(_parse_nums(sys.argv[1:]))))
