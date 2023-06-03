@@ -7,7 +7,8 @@ from imppkg.harmony import main
 
 
 @pytest.mark.parametrize(
-    "inputs, expected_value", [(["1", "4", "4"], 2.0), ([], 0.0), (["badinput"], 0.0)]
+    "inputs, expected_value",
+    [(["1", "4", "4"], 2.0), ([], 0.0), (["badinput"], 0.0)],
 )
 def test_harmony_inputs(inputs, expected_value, monkeypatch, capsys):
     monkeypatch.setattr(sys, "argv", ["harmony"] + inputs)
