@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - uses: actions/setup-python@v4.0.0
-        with: 
+        with:
           python-version: "3.10"
 
       - name: Install tox
@@ -27,7 +27,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - uses: actions/setup-python@v4.0.0
-        with: 
+        with:
           python-version: "3.10"
 
       - name: Install tox
@@ -43,7 +43,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - uses: actions/setup-python@v4.0.0
-        with: 
+        with:
           python-version: "3.10"
 
       - name: Install tox
@@ -67,7 +67,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - uses: actions/setup-python@v4.0.0
-        with: 
+        with:
           python-version: ${{ matrix.python.version }}
 
       - name: Install tox
@@ -75,3 +75,26 @@ jobs:
 
       - name: Run pytest
         run: tox -e ${{ matrix.python.toxenv }}
+
+  wheels:
+    name: Build wheels
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-20.04, windows-2019, macOS-10.15]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v3
+
+      - name: Install cibuildwheel
+        run: python -m pip install cibuildwheel
+
+      - name: Build wheels
+        run: python -m cibuildwheel --output-dir wheels
+
+      - uses: actions/upload-artifact@v3
+        with:
+          path: ./wheels/*.whl
+
