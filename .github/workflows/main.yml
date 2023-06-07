@@ -21,7 +21,7 @@ jobs:
         run: tox -e format
 
   lint:
-    name: Run linter
+    name: Run flake8 linter
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
