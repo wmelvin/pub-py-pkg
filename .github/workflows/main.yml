@@ -21,7 +21,7 @@ jobs:
         run: tox -e format
 
   lint:
-    name: Run flake8 linter
+    name: Run linting
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -35,4 +35,20 @@ jobs:
 
       - name: run flake8
         run: tox -e lint
+
+  typecheck:
+    name: Run type checking
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4.0.0
+        with: 
+          python-version: "3.10"
+
+      - name: Install tox
+        run: python -m pip install tox
+
+      - name: run typecheck with mypy
+        run: tox -e typecheck
 
