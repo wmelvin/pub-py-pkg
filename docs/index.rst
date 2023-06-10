@@ -10,6 +10,8 @@ Welcome to pubpypack-harmony-bill-melvin's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   reference/modules
+
 
 
 Indices and tables
