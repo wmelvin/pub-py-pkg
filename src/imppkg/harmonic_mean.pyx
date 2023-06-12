@@ -2,6 +2,9 @@ from typing import List
 
 
 def harmonic_mean(measurements: List[float]):
+    """
+    Returns the hamonic mean for the given list of measurements.
+    """
     n = sum([1 / m for m in measurements])
     return len(measurements) / n
 

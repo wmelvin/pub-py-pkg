@@ -1,3 +1,11 @@
+"""
+harmony.py
+
+usage: harmony.py value1 value2 ... value(n)
+where: values are the list of floating point numbers
+for which to calculate the harmonic mean.
+"""
+
 import sys
 
 from termcolor import colored
