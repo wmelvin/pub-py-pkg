@@ -6,6 +6,12 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
+from importlib import metadata
+
+PACKAGE_VERSION = metadata.version("pubpypack-harmony-bill-melvin")
+
+version = release = PACKAGE_VERSION
+
 project = 'pubpypack-harmony-bill-melvin'
 copyright = '2023, Bill Melvin'
 author = 'Bill Melvin'
