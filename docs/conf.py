@@ -12,7 +12,8 @@ from importlib import metadata
 
 PACKAGE_VERSION = metadata.version("pubpypack-harmony-bill-melvin")
 
-version = release = PACKAGE_VERSION
+version = PACKAGE_VERSION
+release = PACKAGE_VERSION
 
 project = 'pubpypack-harmony-bill-melvin'
 copyright = '2023, Bill Melvin'
@@ -58,5 +59,4 @@ if os.environ.get("READTHEDOCS") == "True":
         ])
 
     def setup(app):
-        app.connect("builder-inited, run_apidoc")
-
+        app.connect("builder-inited", run_apidoc)
