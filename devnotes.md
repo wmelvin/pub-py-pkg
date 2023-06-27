@@ -1,12 +1,14 @@
-# Book: "Publishing Python Packages" by Dane Hillard
+# devnotes
 
-O'Reilly: [Publishing Python Packages](https://learning.oreilly.com/library/view/publishing-python-packages/9781617299919/)
+Working the exercises in [Publishing Python Packages](https://pypackages.com/) by Dane Hillard
 
-GitHub: [daneah/publishing-python-packages](https://github.com/daneah/publishing-python-packages)
+Book:
+- O'Reilly: [Publishing Python Packages](https://learning.oreilly.com/library/view/publishing-python-packages/9781617299919/)
+- GitHub: [daneah/publishing-python-packages](https://github.com/daneah/publishing-python-packages)
 
 ---
 
-### Tools installed
+## Tools Installed
 
 Installed [asdf](https://asdf-vm.com/).
 
@@ -55,14 +57,13 @@ pipx install cookiecutter
 cookiecutter --version
 ```
 
-## Links
+---
+
+## Coursework Links and Commits
 
 [Python Documentation](https://docs.python.org/3/)
 
 [An Overview of Packaging for Python](https://packaging.python.org/en/latest/overview/) - Python Packaging User Guide
-
-
-## Coursework Commits
 
 [TOML](https://toml.io/en/) - Tom's Obvious Minimal Language
 
@@ -370,6 +371,8 @@ Alternatives:
 
 Regarding *Travis CI*, the author says
 > I strongly recommend staying away from Travis CI, and I won’t link to it here. Although it used to be one of the most beloved platforms for open source projects, it has suffered from slow feature development, poor communication, security concerns, and a push toward paid plans since its acquisition in 2019.
+
+I call this out not to pick on Travis CI, but as a reminder to look into it closely if in a situation where it is being considered.
 
 ---
 
